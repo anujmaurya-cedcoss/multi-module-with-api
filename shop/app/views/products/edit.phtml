@@ -1,0 +1,17 @@
+<?php
+include_once(APP_PATH . '/views/header.php');
+?>
+<form action="/products/update?id=<?php echo $data->id ?>" method="post">
+    <div class="container">
+        <label for="name" class='col m-3'>
+            Product Name : <input type='text' name='name' value="<?php echo $data->name ?>">
+        </label>
+        <label for="id" class='col m-3'>
+            Product ID : <input type='text' class='ml-4' name='id' value="<?php echo $data->id ?>" disabled>
+        </label>
+        <label for="price" class='col m-3'>
+            Product Price : <input type='number' name='price' value="<?php echo $data->price ?>">
+        </label>
+        <input type="submit" value="Submit" class='m-3 btn btn-success'>
+    </div>
+</form>

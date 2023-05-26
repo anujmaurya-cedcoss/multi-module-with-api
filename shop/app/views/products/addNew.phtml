@@ -1,0 +1,17 @@
+<?php
+include_once(APP_PATH . '/views/header.php');
+?>
+<form action="/products/add" method="post">
+    <div class="container">
+        <label for="name" class='col m-3'>
+            Product Name : <input type='text' name='name' placeholder="Product Name">
+        </label>
+        <label for="id" class='col m-3'>
+            Product ID : <input type='number' class='ml-4' name='id' placeholder="Product ID">
+        </label>
+        <label for="price" class='col m-3'>
+            Product Price : <input type='number' name='price' placeholder="Product Price">
+        </label>
+        <input type="submit" value="Add Product" class='m-3 btn btn-success'>
+    </div>
+</form>

@@ -1,0 +1,15 @@
+<?php
+include_once(APP_PATH.'/views/header.php');
+echo "<div class = 'row container'>";
+foreach ($data as $value) {
+    echo '<div class="card m-3" style="width: 18rem;">
+    <div class="card-body">
+        <h5>Product ID : <strong>'.$value->id.'</strong></h5>
+        <h5 class="card-title"> Name : <strong>'.$value->name.'</strong></h5>
+        <h6 class="card-subtitle mb-2 text-muted"> Price : <strong>'.$value->price.'<strong></h6>
+        <a href="/products/edit?id='.$value->id.'" class="card-link">Edit</a>
+        <a href="/products/delete?id='.$value->id.'" class="card-link">Delete</a>
+    </div>
+  </div>';
+}
+echo "</div>";
